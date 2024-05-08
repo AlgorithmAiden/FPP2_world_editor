@@ -1,7 +1,38 @@
-Path creator:
- * path control buttons:
- * * remove last point: removes the last point from the current path
- * * save path: pops open a window to name the path, then saves it to storage
- * * clear path: resets the path
- * * load / remove path:
- * * *
+Welcome to the FPP2 world creator!
+With this website you can create, edit, or share worlds with others!
+
+To get started, you first need to know the basic structure of a world file: blocks, levels, and settings:
+ * blocks is just all of the blocks used in any of the levels, more on them later.
+ * levels are still pretty simple, they are just the grid, keys, and gateways.
+ * settings has loads of small things, such as what block to use as a player, what level to start on, and so forth.
+
+Before you can create a world, you need to create levels, before you can create levels, you need to create blocks, before you can create blocks, you need sprites, and before you can create sprites, you need paths.
+
+All a path is is a list of points on a 2d plane, these are notoriously annoying to create by hand, so you are given access to the path creator, from which you can create paths just by clicking points on a grid, the controls are below:
+ * Path control buttons:
+ * * Remove last point
+ * * Save path: opens up a text input, you must choose a name you have not used for a path yet
+ * * Clear path: removes all points
+ * * Load / Remove path: opens a menu with options to load (replace the current path with said path) or remove (delete it from memory) all the paths
+ * Grid Size: the number of cells to show, will always keep the square 0,0-1,1 as the center
+ * Grid Density: the number of points you can click per cell, a higher number gives more precision when choosing points
+
+Now that you can create paths, next up is sprites: a sprite here is a list of paths and colors, along with outline or fill settings, you have access to a sprite creator too, its controls are below:
+ * Sprite control buttons:
+ * * Save sprite: same as save path, but the name only needs to be unique to the sprites
+ * * Load / Remove sprite
+ * * Remove last layer of sprite: since a sprite is composed of layers, this will remove the last layer you added
+ * * Clear sprite: removes all layers
+ * Toggle fill: toggles whether or not the sprite should be filled, and hides the relevant buttons when off
+ * Fill color: the color selector varies by browser, but it is assumed that alpha is ignored
+ * Fill color alpha: alpha is how transparent the color should be, and is in the range of 0-1
+ * Toggle outline: same as toggle fill, but for the outline and related buttons
+ * Outline color
+ * Outline color alpha
+ * Outline width: how thick the line should be, 1 would be the same size as one cell
+ * Add path: will have a dropdown of every path you have saved, clicking one will add it to the sprite with the current color settings
+ * Toggle advanced placement: toggles some extra options, when this is on, whatever point you click will be used as the origin
+ * Grid Size: same as the path creator
+ * Grid Density: ^
+ * Path rotation: rotates each point of the path around the origin (which is normally the top left) 0-360
+ * Path scale: scales each point by this amount, points will move towards the origin

@@ -861,8 +861,8 @@ let navigationButtons = [
 
             addButtonInput([{
                 text: 'Remove last point', func() {
-                    if (path.length > 0)
-                        path.pop()
+                    if (blockJumpZonePath.length > 0)
+                        blockJumpZonePath.pop()
                 }
             }])
         }
